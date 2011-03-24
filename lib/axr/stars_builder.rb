@@ -96,10 +96,10 @@ module AjaxfulRating # :nodoc:
       }.to_query
       
       options = {
-        :class => css_class,
-        :title => i18n(:hover, value),
-        :method => remote_options[:method] || :post,
-        :remote => true
+        :class => "#{css_class} rate_link",
+        :title => i18n(:hover, value)#,
+        #:method => remote_options[:method] || :post,
+        #:remote => true
       }
       
       href = "#{remote_options[:url]}?#{query}"
